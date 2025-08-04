@@ -6,6 +6,13 @@
     <link rel="stylesheet" type="text/css" href="./styles/simple.css" />
     <link rel="stylesheet" type="text/css" href="./styles/custom.css" />
     <title>Image gallery</title>
+    <style>
+        img{
+            /*width: 40rem;*/
+            aspect-ratio: 1920/1080;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <header>
