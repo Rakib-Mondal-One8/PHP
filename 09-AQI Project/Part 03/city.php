@@ -77,13 +77,40 @@ if(!empty($filename)){
     <p>The city could not be loaded!!</p>
 <?php else :?>
     <h1><?php echo $cityInfo['city']; ?> <?php echo $cityInfo['flag']; ?></h1>
+
     <?php if(!empty($stats)) : ?>
+
+        <canvas id="aqi-chart" style="width: 300px ; height: 200px;"></canvas>
+
+        <script src="./scripts/chart.umd.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const ctx = document.getElementById('aqi-chart');
+                const chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Label 01','Label 02','Label 03','Label 04','Label 05','Label 06','Label 07'],
+                        datasets: [{
+                            label: 'My First Dataset',
+                            data: [65, 59, 80, 81, 56, 55, 40],
+                            fill: false,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                        }]
+                    }
+                });
+            });
+
+        </script>
+
+
+
         <table>
             <thead>
                 <tr>
                     <th>Month</th>
                     <th>PM 2.5 concentration</th>
-                    <th>PM 10 concentration</th>
+                    <th>PM 1.0 concentration</th>
                 </tr>
             </thead>
             <tbody>
