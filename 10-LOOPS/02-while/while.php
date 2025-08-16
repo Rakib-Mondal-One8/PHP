@@ -11,6 +11,16 @@
 <body>
 <pre><?php
 
+    $sum = 0;
+    $num=0;
+    while($sum<100){
+//        var_dump('Hello PHP!');
+//        break;
+
+        $sum+=$num;
+        $num++;
+    }
+    var_dump($num,$sum);
 ?></pre>
 </body>
 </html>
