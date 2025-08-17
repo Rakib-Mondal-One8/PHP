@@ -14,7 +14,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=note_app', 'root', '', [
 $title = 'A title (from PHP)';
 $content = 'The content \'\"(from PHP)';
 
-$stmt = $pdo->prepare("INSERT INTO `notes` (`title`, `content`) VALUES (:title, :content)");
+$stmt = $pdo->prepare("INSERT INTO `notes` (`title`, `content`) VALUES (:title, :content)"); // ':' --> Place Holder
 $stmt->bindValue('title',$title);
 $stmt->bindValue('content',$content);
 $stmt->execute();
