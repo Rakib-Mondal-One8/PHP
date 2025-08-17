@@ -25,7 +25,7 @@ var_dump($note);
 */
 
 $stmt = $pdo->prepare('SELECT * FROM `notes` WHERE `id`= :id');
-$stmt->bindValue('id',$_GET['id']);
+$stmt->bindValue('id',$_GET['id']); // Prevents SQL injections
 $stmt->execute();
 
 $note = $stmt->fetch(PDO::FETCH_ASSOC);
