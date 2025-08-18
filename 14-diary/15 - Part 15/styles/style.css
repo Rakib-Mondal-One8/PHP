@@ -68,6 +68,8 @@ html {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.25em;
+    margin-top: 0;
+    padding-top: 0.67em;
 }
 
 .container {
@@ -111,7 +113,15 @@ html {
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
     display: flex;
+    flex-direction: column;
     overflow: hidden;
+    
+}
+
+@media (min-width: 768px){
+    .card {
+        flex-direction: row;
+    }
 }
 
 .card__heading {
@@ -121,12 +131,22 @@ html {
 }
 
 .card__image {
-    width: 30rem;
-    height: 20rem;
+   
     object-fit: cover;
     display: block;
+    height: 15rem;
+    width: 100%;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
-
+@media (min-width: 768px) {
+    .card__image {
+        width: 30rem;
+        height: 2rem;
+        min-height: 100%;
+        border-radius: 1rem;
+        box-shadow: 0.25rem 0rem 0.5rem rgba(0, 0, 0, 0.1);
+    }
+}
 .card__desc-time {
     color:#328677;
     text-transform:uppercase;
@@ -148,4 +168,103 @@ html {
 .card__paragraph {
     color:#112243;
     line-height: 1.33em;
+}
+
+.card__desc-container {
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+
+.pagination {
+    display:flex;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    justify-content: flex-end;
+}
+
+.pagination__link {
+    display: block;
+    color:#131313;
+    border:0.125rem solid rgb(200,200,200);
+    width : 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 1.75rem;
+    margin-left: 0.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background-color: white;
+}
+
+.pagination__link:hover {
+    color: white;
+    background-color: #328677;
+    border: 0.125rem solid #328677;
+}
+
+.pagination__link--active {
+    border: 0.125rem solid #328677;
+    color:#328677;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    padding:2rem;
+}
+
+.main::before,
+.main::after {
+    content:"";
+    display: block;
+    position:absolute;
+    top: -1rem;
+    bottom: -1rem;
+    width: 10rem;
+    background-image: url('../images/bg-lines.svg');
+    background-size: cover;
+    background-position: right center;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.main::before {
+    
+    left: 0;
+    
+}
+
+.main::after {
+
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.footer {
+    background-color: #113343;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footer::after {
+    content:"";
+    display: block;
+    width: 7.5rem;
+    height: 0.125rem;
+    background-color: white;
+    margin: 0 auto;
+    opacity: 0.5;
+    margin-top: 2.5rem;
+}
+
+.footer__heading {
+    color: white;
+}
+
+.footer__desc {
+    color: #8ed8a9;
+    max-width: 20rem;
+    line-height: 1.33rem;
 }
