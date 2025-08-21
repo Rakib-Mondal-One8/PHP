@@ -55,7 +55,6 @@ if (!empty($_POST)) {
 
 // echo '<a href="index.php">Continue to the diary<a/>';
 
-// die();
 
 ?>
 
