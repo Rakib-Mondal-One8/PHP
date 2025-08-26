@@ -28,11 +28,11 @@ a.active:visited {
 
 .pagination__link:hover {
     color: white;
-    background-color: #328677;
-    border: 0.125rem solid #328677;
+    background-color: var(--accent);
+    border-color: var(--accent);
 }
 
 .pagination__link--active {
-    border: 0.125rem solid #328677;
+    border-color: var(--accent);
     color: #328677;
 }
