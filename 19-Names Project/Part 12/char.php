@@ -14,5 +14,6 @@ if (strlen($char) === 0){
 $data = fetch_names_by_initial($char);
 
 render('char.view',[
-    'data' => $data
+    'data' => $data,
+    'char' => $char
 ]);
