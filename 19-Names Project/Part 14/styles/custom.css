@@ -1,0 +1,38 @@
+a.active,
+a.active:visited {
+    border-color: var(--accent);
+    color:var(--accent);
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.pagination__link {
+    display: block;
+    color: #113343;
+    border: 0.125rem solid rgb(200, 200, 200);
+    width: 2rem;
+    height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.75rem;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.pagination__link:hover {
+    color: white;
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.pagination__link--active {
+    border-color: var(--accent);
+    color: #328677;
+}
