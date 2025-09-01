@@ -15,3 +15,4 @@ if(empty($city)){
 render('city.view', [
     'city' => $city
 ]);
+ 
