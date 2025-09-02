@@ -5,15 +5,15 @@
 function autoload($class){
     var_dump($class);
     if($class === 'Admin\\User'){
-        require __DIR__ ."/src/admin/User.php";
+        require __DIR__ ."/src/Admin/User.php";
         return;
     }
     if ($class === 'Admin\\Role') {
-        require __DIR__ . "/src/admin/Role.php";
+        require __DIR__ . "/src/Admin/Role.php";
         return;
     }
     if ($class === 'Client\\User') {
-        require __DIR__ . "/src/client/User.php";
+        require __DIR__ . "/src/Client/User.php";
         return;
     }
 }
