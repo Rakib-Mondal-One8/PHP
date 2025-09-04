@@ -22,5 +22,5 @@ class Dog extends Animal
     }
 }
 
-$dog = new Dog();;
+$dog = new Dog();
 $dog->eat();
