@@ -21,7 +21,7 @@
                     <?php if (!empty($page) && !empty($page->id) && $page instanceof App\Model\PageModel && ($page->id === $navPage->id)): ?>
                     class="active"
                     <?php endif; ?>>
-
+ 
                     <?php echo e($navPage->title); ?>
                 </a>
             <?php endforeach; ?>
