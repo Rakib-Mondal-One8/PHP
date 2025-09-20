@@ -2,13 +2,13 @@
 
 <form method="POST" action="index.php?route=admin/pages/create">
     <label for="title">Title:</label>
-    <input type="text" name="title" value="" id="title" />
+    <input type="text" name="title" value="<?php if (!empty($_POST['title'])) echo e($_POST['title']); ?>" id="title" />
 
     <label for="slug">Slug:</label>
-    <input type="text" name="slug" value="" id="slug" />
+    <input type="text" name="slug" value="<?php if (!empty($_POST['slug'])) echo e($_POST['slug']); ?>" id="slug" />
 
     <label for="content">Title:</label>
-    <textarea name="content" id="content"></textarea>
+    <textarea name="content" id="content"><?php if (!empty($_POST['title'])) echo e($_POST['content']); ?></textarea>
 
     <input type="submit" value="Submit!">
 </form>

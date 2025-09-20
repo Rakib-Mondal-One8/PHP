@@ -24,8 +24,11 @@ class PagesAdminController extends AbstractAdminController
             $slug = @(string)($_POST['slug'] ?? '');
             $content = @(string)($_POST['content'] ?? '');
 
-            if(!empty($title) && !empty($slug) && !empty($content)){
-                $this->pagesRepository->create($title,$slug,$content);
+            if (!empty($title) && !empty($slug) && !empty($content)) {
+                $slugExists = $this->pagesRepository->getSlugExists($slug);
+                if (empty($slugExists)) {
+                    $this->pagesRepository->create($title, $slug, $content);
+                }
             }
         }
         $this->render('pages/create', []);
